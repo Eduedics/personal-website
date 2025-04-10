@@ -1,0 +1,107 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static '/styles/main.css'%}>
+    <title>Edward Karani</title>
+</head>
+<body>
+    <section class="navigation-bar">
+        <a class="nav-link" href="">projects</a>
+        <a class="nav-link" href="">courses</a>
+        <a class="nav-link" href="">contact</a>
+
+    </section>
+    <section class="hero-sec">
+        <div class="hero-content">
+            {% for item in tag%}
+                <div class="hero-content-wrapper">
+                    <img id="profile-pic" src={{item.image}}/>
+                    <h1 class="name">{{item.f_name}} <br>{{item.l_name}}</h1>
+                </div>
+            
+                <div class="hero-content-subheadline"></div>
+                    <h3 class="'description">{{item.title}}</h3>
+                    <p class="slogan">{{item.description}}</p>
+                </div>
+            {%endfor%}
+            
+        </div>
+    </section>
+    <section class="container">
+        <div class="title-wrapper">
+            <h3 class="projects"> My Projects</h3>
+            <h5>Projects that makes my journey worthwhile</h5>
+        </div>
+        <div class="project-wrapper">
+
+            <div class="project-column">
+                <img class="project-img" src={% static 'images/img1.jpg'%} />
+                <div class="project-body">
+                    <h5 class="project-title">Departmental courses</h5>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laboriosam ut impedit et quae sed ducimus, expedita facilis quas totam!</p>
+                </div>
+                <div class="btns">
+                    <a class="success" href="">preview</a>
+                    <a class="danger" href="">sourcecode</a>
+                </div>
+            </div>
+
+            <div class="project-column">
+                <img class="project-img" src={% static 'images/img1.jpg'%}/>
+                <div class="project-body">
+                    <h5 class="project-title">Departmental courses</h5>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laboriosam ut impedit et quae sed ducimus, expedita facilis quas totam!</p>
+                </div>
+                <div class="btns">
+                    <a class="success" href="">preview</a>
+                    <a class="danger" href="">sourcecode</a>
+                </div>
+            </div>
+
+            <div class="project-column">
+                <img class="project-img" src={% static 'images/img1.jpg'%}/>
+                <div class="project-body">
+                    <h5 class="project-title">Departmental courses</h5>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laboriosam ut impedit et quae sed ducimus, expedita facilis quas totam!</p>
+                </div>
+                <div class="btns">
+                    <a class="success" href="">preview</a>
+                    <a class="danger" href="">sourcecode</a>
+                </div>
+            </div>
+
+            <div class="project-column">
+                <img class="project-img" src={% static '/images/img1.jpg'%} />
+                <div class="project-body">
+                    <h5 class="project-title">Departmental courses</h5>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laboriosam ut impedit et quae sed ducimus, expedita facilis quas totam!</p>
+                </div>
+                <div class="btns">
+                    <a class="success" href="">preview</a>
+                    <a class="danger" href="">sourcecode</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="about-wrapper">
+            <h3 class="projects">About Me</h3>
+            <p> I’m a Full-Stack Developer with a strong focus on React.js and modern web technologies. With 2 years of experience, including work on Upwork, I specialize in building clean, responsive, and user-friendly web applications.
+            <h5>My Skillset:</h5>
+                <ul>
+                    <li>Front-End Development: HTML5, CSS3, JavaScript, Bootstrap</li>
+                    <li>JavaScript Frameworks: React.js</li>
+                    <li>Back-End Knowledge: Python, Django</li>
+                    <li>UI/UX Focus: Creating intuitive and interactive designs</li>
+                    <li> Freelance & Remote Experience: Successfully delivered projects on Upwork</li>
+                </ul> 
+            I am passionate about writing efficient, scalable code and always eager to learn new technologies. Let’s build something amazing together! </p>
+        </div>
+    </section>
+    
+</body>
+</html>
