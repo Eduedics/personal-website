@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+.env
+.env.*
+
+# Venv
+venv/
+ENV/
+env/
+.venv/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Static/media
+staticfiles/
+media/
+static/
+
+# Migrations (optional if you want to reset them often)
+**/migrations/*.py
+!**/migrations/__init__.py
